@@ -7,7 +7,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 function Menu() {
   return (
     <nav className="menu">
-      <a className="menu__item" href="/router-menu/">
+      <a className="menu__item" href="../">
         Главная
       </a>
       <a className="menu__item" href="../router-menu/drift">
@@ -100,7 +100,7 @@ export default function App() {
         <Menu />
         <div className="page">
           <Routes>
-            <Route path="/router-menu/" exact element={<HomePage />} />
+            <Route path="../" exact element={<HomePage />} />
             <Route path="../router-menu/drift" element={<DriftPage />} />
             <Route
               path="../router-menu/timeattack"

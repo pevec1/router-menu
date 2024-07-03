@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 function Menu() {
   return (
     <nav className="menu">
-      <Link className="menu__item" to={"/"}>
+      <Link className="menu__item" to={"/router-menu/"}>
         Главная
       </Link>
       <Link className="menu__item" to={"/drift"}>
@@ -16,7 +16,7 @@ function Menu() {
       <Link className="menu__item" to={"/timeattack"}>
         Time Attack
       </Link>
-      <Link className="menu__item" to={"/forza"}>
+      <Link className="menu__item" to={"/router-menu/forza"}>
         Forza Karting
       </Link>
     </nav>
@@ -100,13 +100,13 @@ export default function App() {
         <Menu />
         <div className="page">
           <Routes>
-            <Route path="/" exact element={<HomePage />} />
+            <Route path="/router-menu/" exact element={<HomePage />} />
             <Route path="/drift" element={<DriftPage />} />
             <Route
               path="/timeattack"
               element={<TimeAttackPage />}
             />
-            <Route path="/forza" element={<ForzaPage />} />
+            <Route path="/router-menu/forza" element={<ForzaPage />} />
           </Routes>
         </div>
       </div>

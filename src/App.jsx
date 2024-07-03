@@ -107,7 +107,7 @@ export default function App() {
               element={<TimeAttackPage />}
             />
             <Route path="/forza" element={<ForzaPage />} />
-            <Route component={<HomePage />} />
+            <Route component={HomePage} />
           </Switch>
         </div>
       </div>

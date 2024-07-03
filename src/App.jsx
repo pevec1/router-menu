@@ -2,21 +2,21 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './index.css'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 function Menu() {
   return (
     <nav className="menu">
-      <a className="menu__item" href="/router-menu/">
+      <a className="menu__item" href="/">
         Главная
       </a>
-      <a className="menu__item" href="../router-menu/drift">
+      <a className="menu__item" href="/drift">
         Дрифт-такси
       </a>
-      <a className="menu__item" href="../router-menu/timeattack">
+      <a className="menu__item" href="/timeattack">
         Time Attack
       </a>
-      <a className="menu__item" href="./router-menu/forza">
+      <a className="menu__item" href="/forza">
         Forza Karting
       </a>
     </nav>
@@ -100,13 +100,13 @@ export default function App() {
         <Menu />
         <div className="page">
           <Routes>
-            <Route path="/router-menu/" exact element={<HomePage />} />
-            <Route path="../router-menu/drift" element={<DriftPage />} />
+            <Route path="/" exact element={<HomePage />} />
+            <Route path="/drift" element={<DriftPage />} />
             <Route
-              path="../router-menu/timeattack"
+              path="/timeattack"
               element={<TimeAttackPage />}
             />
-            <Route path="./router-menu/forza" element={<ForzaPage />} />
+            <Route path="/forza" element={<ForzaPage />} />
           </Routes>
         </div>
       </div>

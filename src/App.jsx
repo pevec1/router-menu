@@ -100,14 +100,13 @@ export default function App() {
         <Menu />
         <div className="page">
           <Switch>
-            <Route path="/" exact render={() =><HomePage />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/drift" element={<DriftPage />} />
             <Route
               path="/timeattack"
               element={<TimeAttackPage />}
             />
             <Route path="/forza" element={<ForzaPage />} />
-            <Route component={HomePage} />
           </Switch>
         </div>
       </div>

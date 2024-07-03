@@ -2,7 +2,7 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './index.css'
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function Menu() {
   return (
@@ -97,18 +97,18 @@ export default function App() {
   return (
     <Router>
       <div>
+        <Menu />
         <div className="page">
-          <Routes>
-            <Route path="/" element={<Menu />} />
-            <Route index element={<HomePage />} />
-            
-            <Route path="drift" element={<DriftPage />} />
+          <Switch>
+            <Route exact path="/" render={() =><HomePage />} />
+            <Route path="/drift" element={<DriftPage />} />
             <Route
-              path="timeattack"
+              path="/timeattack"
               element={<TimeAttackPage />}
             />
-            <Route path="forza" element={<ForzaPage />} />
-          </Routes>
+            <Route path="/forza" element={<ForzaPage />} />
+            <Route component={<HomePage />} />
+          </Switch>
         </div>
       </div>
     </Router>

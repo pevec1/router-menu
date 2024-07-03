@@ -10,13 +10,13 @@ function Menu() {
       <a className="menu__item" href="/router-menu/">
         Главная
       </a>
-      <a className="menu__item" href="../drift">
+      <a className="menu__item" href="../router-menu/drift">
         Дрифт-такси
       </a>
-      <a className="menu__item" href="../timeattack">
+      <a className="menu__item" href="../router-menu/timeattack">
         Time Attack
       </a>
-      <a className="menu__item" href="./forza">
+      <a className="menu__item" href="./router-menu/forza">
         Forza Karting
       </a>
     </nav>
@@ -101,12 +101,12 @@ export default function App() {
         <div className="page">
           <Routes>
             <Route path="/router-menu/" exact element={<HomePage />} />
-            <Route path="../drift" element={<DriftPage />} />
+            <Route path="../router-menu/drift" element={<DriftPage />} />
             <Route
-              path="../timeattack"
+              path="../router-menu/timeattack"
               element={<TimeAttackPage />}
             />
-            <Route path="./forza" element={<ForzaPage />} />
+            <Route path="./router-menu/forza" element={<ForzaPage />} />
           </Routes>
         </div>
       </div>

@@ -26,9 +26,9 @@ function Menu() {
 function HomePage() {
   return (
     <article className="article">
-      <h1 className="article__title">Гоночн​ое такси</h1>
+      <h1 className="article__title">Гоночное такси</h1>
       <p className="article__paragraph">
-        Гоночн​ое такси – отличная возможность насладиться скоростью и мастерством гонщика,
+        Гоночное такси – отличная возможность насладиться скоростью и мастерством гонщика,
         сидя на месте штурмана, и стать свидетелем настоящего мастерства профессиональных
         инструкторов Сочи Автодрома, в полной мере ощутив крутые виражи на самой современной
         гоночной трассе России.
@@ -42,7 +42,7 @@ function DriftPage() {
     <article className="article">
       <h1 className="article__title">Дрифт-такси</h1>
       <p className="article__paragraph">
-        Только ​на Сочи Автодроме вас ждет уникальная возможность
+        Только на Сочи Автодроме вас ждет уникальная возможность
         промчаться по трассе Формулы 1 на максимально возможной
         скорости в управляемом заносе на легендарной «королеве дрифта» Nissan Silvia!
       </p>
@@ -76,7 +76,7 @@ function ForzaPage() {
 function TimeAttackPage() {
   return (
     <article className="article">
-      <h1 className="article__title">Гонка ​​​​​​Time Attack</h1>
+      <h1 className="article__title">Гонка Time Attack</h1>
       <p className="article__paragraph">
         Гонка Time Attack создана для тех, кто любит ставить рекорды –
    открытое соревнование на гражданских автомобилях не предполагает
@@ -100,7 +100,7 @@ export default function App() {
         <Menu />
         <div className="page">
           <Switch>
-            <Route exact path="/" render={() =><HomePage />} />
+            <Route path="/" exact render={() =><HomePage />} />
             <Route path="/drift" element={<DriftPage />} />
             <Route
               path="/timeattack"

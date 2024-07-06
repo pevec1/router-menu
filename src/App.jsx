@@ -7,16 +7,36 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 function Menu() {
   return (
     <nav className="menu">
-      <Link className="menu__item" to={"/router-menu/"}>
+      <Link
+        className={({ isActive }) =>
+          isActive ? "menu__item-active" : "menu__item"
+        }
+        to={"/router-menu/"}
+      >
         Главная
       </Link>
-      <Link className="menu__item" to={"/router-menu/drift"}>
+      <Link
+        className={({ isActive }) =>
+          isActive ? "menu__item-active" : "menu__item"
+        }
+        to={"/router-menu/drift"}
+      >
         Дрифт-такси
       </Link>
-      <Link className="menu__item" to={"/router-menu/timeattack"}>
+      <Link
+        className={({ isActive }) =>
+          isActive ? "menu__item-active" : "menu__item"
+        }
+        to={"/router-menu/timeattack"}
+      >
         Time Attack
       </Link>
-      <Link className="menu__item" to={"/router-menu/forza"}>
+      <Link
+        className={({ isActive }) =>
+          isActive ? "menu__item-active" : "menu__item"
+        }
+        to={"/router-menu/forza"}
+      >
         Forza Karting
       </Link>
     </nav>
@@ -26,9 +46,9 @@ function Menu() {
 function HomePage() {
   return (
     <article className="article">
-      <h1 className="article__title">Гоночн​ое такси</h1>
+      <h1 className="article__title">Гоночное такси</h1>
       <p className="article__paragraph">
-        Гоночн​ое такси – отличная возможность насладиться скоростью и мастерством гонщика,
+        Гоночное такси – отличная возможность насладиться скоростью и мастерством гонщика,
         сидя на месте штурмана, и стать свидетелем настоящего мастерства профессиональных
         инструкторов Сочи Автодрома, в полной мере ощутив крутые виражи на самой современной
         гоночной трассе России.
@@ -42,7 +62,7 @@ function DriftPage() {
     <article className="article">
       <h1 className="article__title">Дрифт-такси</h1>
       <p className="article__paragraph">
-        Только ​на Сочи Автодроме вас ждет уникальная возможность
+        Только на Сочи Автодроме вас ждет уникальная возможность
         промчаться по трассе Формулы 1 на максимально возможной
         скорости в управляемом заносе на легендарной «королеве дрифта» Nissan Silvia!
       </p>
@@ -76,7 +96,7 @@ function ForzaPage() {
 function TimeAttackPage() {
   return (
     <article className="article">
-      <h1 className="article__title">Гонка ​​​​​​Time Attack</h1>
+      <h1 className="article__title">Гонка Time Attack</h1>
       <p className="article__paragraph">
         Гонка Time Attack создана для тех, кто любит ставить рекорды –
    открытое соревнование на гражданских автомобилях не предполагает

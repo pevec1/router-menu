@@ -8,16 +8,17 @@ function Menu() {
   return (
     <nav className="menu">
       <NavLink
-        className={({ isActive }) =>
-          isActive ? "menu__item-active" : "menu__item"
-        }
+        className={({isActive}) => //(isActive) --> ({isActive})
+            (isActive ? "menu__item-active menu__item" : "menu__item")
+          }
         to={"/router-menu/"}
+        end
       >
         Главная
       </NavLink>
       <NavLink
         className={({ isActive }) =>
-          isActive ? "menu__item-active" : "menu__item"
+          isActive ? "menu__item-active menu__item" : "menu__item"
         }
         to={"/router-menu/drift"}
       >
@@ -25,7 +26,7 @@ function Menu() {
       </NavLink>
       <NavLink
         className={({ isActive }) =>
-          isActive ? "menu__item-active" : "menu__item"
+          isActive ? "menu__item-active menu__item" : "menu__item"
         }
         to={"/router-menu/timeattack"}
       >
@@ -33,7 +34,7 @@ function Menu() {
       </NavLink>
       <NavLink
         className={({ isActive }) =>
-          isActive ? "menu__item-active" : "menu__item"
+          isActive ? "menu__item-active menu__item" : "menu__item"
         }
         to={"/router-menu/forza"}
       >

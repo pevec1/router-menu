@@ -2,43 +2,43 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './index.css'
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 
 function Menu() {
   return (
     <nav className="menu">
-      <Link
+      <NavLink
         className={({ isActive }) =>
           isActive ? "menu__item-active" : "menu__item"
         }
         to={"/router-menu/"}
       >
         Главная
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         className={({ isActive }) =>
           isActive ? "menu__item-active" : "menu__item"
         }
         to={"/router-menu/drift"}
       >
         Дрифт-такси
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         className={({ isActive }) =>
           isActive ? "menu__item-active" : "menu__item"
         }
         to={"/router-menu/timeattack"}
       >
         Time Attack
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         className={({ isActive }) =>
           isActive ? "menu__item-active" : "menu__item"
         }
         to={"/router-menu/forza"}
       >
         Forza Karting
-      </Link>
+      </NavLink>
     </nav>
   );
 }
